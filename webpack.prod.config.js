@@ -51,10 +51,12 @@ module.exports = {
         ]
     },
     plugins: [
-        new CopyPlugin([
-            { from: './index.js', to: './dist' },
-            { from: './package.json', to: './dist' },
-            { from: './README.md', to: './dist' }
-        ])
+        new CopyPlugin({
+            patterns: [
+                { from: './index.js', to: './dist' },
+                { from: './package.json', to: './dist' },
+                { from: './README.md', to: './dist' }
+            ]
+        })
     ]
 };
